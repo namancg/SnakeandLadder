@@ -3,7 +3,8 @@ package com.bridgelabz.snakeandladder;
 public class SnakeAndLadder {
 
 	public static void main(String[] args) {
-int pos = 0;
+
+		int pos = 0;
 		
 		while(pos<100) {
 			
@@ -19,7 +20,8 @@ int pos = 0;
 			case 1:
 				System.out.println("LADDER");
 				pos+=dice;
-				
+				if(pos>100)
+					pos-=dice;
 				break;
 				
 			case 2:
@@ -32,6 +34,9 @@ int pos = 0;
 			}
 			System.out.println("Rolled Dice: "+dice);
 			System.out.println("Current Position : "+pos);
-}
+			
+		}
+		
+		System.out.println("WINNER!");
 }
 }
